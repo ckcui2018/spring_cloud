@@ -1,0 +1,33 @@
+group 'com.spring.cloud'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
+
+sourceCompatibility = 1.8
+
+dependencies {
+    testCompile('org.springframework.boot:spring-boot-starter-test')
+
+    compile('org.springframework.cloud:spring-cloud-starter-eureka')
+    compile('org.springframework.cloud:spring-cloud-starter-zuul')
+    compile('org.springframework.cloud:spring-cloud-starter-ribbon')
+
+    compile('org.springframework.cloud:spring-cloud-starter-sleuth')
+    compile('org.springframework.cloud:spring-cloud-sleuth-zipkin')
+
+    compile('org.springframework.security.oauth:spring-security-oauth2')
+
+//    compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.7'
+
+    compileOnly('org.projectlombok:lombok')
+}
+
+
+dependencyManagement {
+    imports {
+        mavenBom "org.springframework.cloud:spring-cloud-dependencies:Dalston.RELEASE"
+    }
+}

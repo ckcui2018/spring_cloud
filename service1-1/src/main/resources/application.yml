@@ -1,0 +1,19 @@
+
+server:
+  port: 8083
+  tomcat:
+      accept-count: 1000
+      max-threads: 1000
+      max-connections: 2000
+
+spring:
+  application:
+    name: service1-1
+  zipkin:
+        base-url: http://localhost:8070
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8090/eureka/
+
+

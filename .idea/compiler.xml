@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel>
+      <module name="api_main" target="1.8" />
+      <module name="api_test" target="1.8" />
+      <module name="eure_main" target="1.8" />
+      <module name="eure_test" target="1.8" />
+      <module name="Geteway_main" target="1.8" />
+      <module name="Geteway_test" target="1.8" />
+      <module name="registry_main" target="1.8" />
+      <module name="registry_test" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

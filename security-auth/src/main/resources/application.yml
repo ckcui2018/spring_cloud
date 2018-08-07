@@ -1,0 +1,39 @@
+
+server:
+  port: 8070
+
+spring:
+  application:
+    name: oauth2-server
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8090/eureka/
+
+##很重要
+security:
+  oauth2:
+    resource:
+      filter-order: 3
+
+#使用POST提交提交 ，加上Basic Authorization [webapp,password]
+#http://localhost:8070/oauth/token?grant_type=password&username=admin&password=12345
+#返回 {"access_token":"f4ae3aef-f45b-49dc-85e5-b122191bcd7a","token_type":"bearer","refresh_token":"ea71d3ed-1813-48b0-a243-9d7dad5dc084","expires_in":43152,"scope":"myapp"}
+#GET提交 http://localhost:8070/user?access_token=f4ae3aef-f45b-49dc-85e5-b122191bcd7a
+
+#http://localhost:8070/oauth/token?grant_type=password&username=user1&password=12345 加上Basic Authorization [webapp,password]
+#http://localhost:8070/oauth/token?grant_type=client_credentials  加上Basic Authorization [webapp,password]
+
+logging:
+  level:
+    org:
+      springframework:
+        security: DEBUG
+
+
+
+
+
+#AnonymousAuthenticationFilter  -log
+
