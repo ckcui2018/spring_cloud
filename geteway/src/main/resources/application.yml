@@ -31,6 +31,7 @@ zuul:
     pre:
       disable: true
   #ignored-services: microservice-comsumer-movie-ribbon-withhystrix  ，不允许代理本服务
+
   routes:
     service0:
       path: /service0/**
