@@ -1,7 +1,7 @@
 
 spring:
   application:
-    name: config-server-client-demo
+    name: config-server-client-demo1
 
 
 server:
