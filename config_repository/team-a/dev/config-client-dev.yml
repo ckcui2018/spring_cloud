@@ -1,0 +1,8 @@
+
+spring:
+  application:
+    name: config-client-dev
+
+
+server:
+  port: 8006
